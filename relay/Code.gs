@@ -705,7 +705,7 @@ function extractJson_(t) {
 
 /* ============================ emails ============================ */
 function supportEmail_() { return prop_('SUPPORT_EMAIL') || Session.getEffectiveUser().getEmail(); }
-function appUrl_() { return prop_('APP_URL') || ''; }
+function appUrl_() { return prop_('APP_URL') || 'https://crispcleaninc-dot.github.io/family-council/'; }
 
 // Layout follows the myEquifax one-time-passcode email: preheader, logo + sign-in link, title band,
 // greeting, bold code, expiry note, security warning with support link, sign-off, legal footer.
