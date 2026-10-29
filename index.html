@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://script.google.com https://script.googleusercontent.com; manifest-src 'self'; worker-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<title>Family Council</title>
+<meta name="description" content="Settle family disagreements fairly: everyone is heard, a guide keeps it fair, and everyone signs a resolution they keep.">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#1B2951">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<div class="top" id="top">
+  <div class="logo"><span class="seal">⚖</span><span class="nm">Family Council</span></div>
+  <div class="sp"></div>
+  <div class="chip hidden" id="ptsChip" title="Peace Points">🕊 <b id="ptsVal">0</b></div>
+  <div class="chip hidden" id="streakChip" title="Promise streak">🔥 <b id="streakVal">0</b></div>
+  <button class="iconbtn" id="aMinus" aria-label="Smaller text">A−</button>
+  <button class="iconbtn" id="aPlus" aria-label="Larger text">A+</button>
+</div>
+
+<main id="view" aria-live="polite"></main>
+
+<nav class="bnav hidden" id="bnav">
+  <button data-go="home" class="on"><span class="i">🏠</span>Home</button>
+  <button data-go="board"><span class="i">🏆</span>Peace board</button>
+  <button data-go="new" class="fab"><span class="i">＋</span>New council</button>
+  <button data-go="learn"><span class="i">⚖️</span>Home vs Court</button>
+  <button data-go="me"><span class="i">👤</span>Me</button>
+</nav>
+
+<div class="sheet" id="sheet" role="dialog" aria-modal="true"><div class="body" id="sheetBody"></div></div>
+<div class="toast" id="toast" role="status"></div>
+<div class="toastx" id="interject" role="alert"></div>
+<canvas id="confetti"></canvas>
+
+<script src="config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
